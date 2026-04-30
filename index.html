@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrusel Industrial Animado</title>
+    <style>
+        #carrusel-frame {
+            width: 99vw;
+            max-width: 9000px;
+            height: 99vh;
+            margin: auto;
+            overflow: hidden; /* Importante para que no se vea el slide saliendo */
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            background: #222; /* Fondo por si la imagen tarda en cargar */
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+            
+            /* --- CONFIGURACIÓN DE LA ANIMACIÓN --- */
+            /* Preparamos la transición para cuando cambie la propiedad 'transform' */
+            transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+            
+            /* Estado inicial: Todas las imágenes ocultas a la derecha */
+            transform: translateX(100%); 
+        }
+
+        /* --- ESTADOS DE LA ANIMACIÓN --- */
+
+        /* 1. Imagen que entra (se vuelve activa) */
+        .slide.active {
+            transform: translateX(0%); /* Se mueve al centro */
+            z-index: 2; /* Se coloca por encima */
+        }
+
+        /* 2. Imagen que sale (estaba activa y ya no) */
+        .slide.exit {
+            transform: translateX(-100%); /* Se mueve a la izquierda */
+            z-index: 1; /* Se coloca por debajo */
+        }
+
+        /* --- Estilos visuales extra --- */
+        .info-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(0, 122, 255, 0.8); /* Azul industrial */
+            color: white;
+            padding: 8px 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            backdrop-filter: blur(5px);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+<div id="carrusel-frame">
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
