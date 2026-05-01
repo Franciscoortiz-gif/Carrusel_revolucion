@@ -1,5 +1,4 @@
-images/Logo.png,2000
-images/Captura desde 2026-03-23 20-59-12.png,2000
-images/Captura desde 2026-03-31 15-01-05.png,2000
-images/Captura desde 2026-04-12 12-35-19.png,2000
-images/Captura desde 2026-04-17 00-03-47.png,2000
+images/3.png,5000
+images/5.png,4000
+images/2.png,3000
+images/3.png,4000
