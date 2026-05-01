@@ -3,7 +3,7 @@ async function iniciarCarruselAnimado() {
     
     try {
         // 1. Cargar configuración
-        const respuesta = await fetch('config.txt');
+        const respuesta = await fetch(`config.txt?t=${Date.now()}`);
         const texto = await respuesta.text();
         
         // 2. Parsear datos
