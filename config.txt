@@ -1,4 +1,4 @@
 images/3.png,5000
 images/5.png,4000
 images/2.png,3000
-images/3.png,4000
+images/logo.png,2000
