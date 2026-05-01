@@ -1,5 +1,4 @@
-images/1.png,3000
-images/2.png,5000
-images/3.png,2000
-images/4.png,2000
-images/5.png,2000
+images/3.png,5000
+images/5.png,4000
+images/2.png,3000
+images/3.png,4000
